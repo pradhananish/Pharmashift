@@ -1,0 +1,23 @@
+.home-page {
+    background-color: #93E9BE;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 60px;
+    
+
+}
+
+.left-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.right-column {
+    flex: 1;
+    overflow-y: auto;
+    max-height: calc(100vh - 60px-40px); /* Adjust this based on your header/footer height */
+    padding-left: 20px;
+}

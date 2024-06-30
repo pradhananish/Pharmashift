@@ -10,6 +10,7 @@ const Navbar = () => {
         setIsOpen(!isOpen);
     };
 
+    console.log('Navbar rendered');
     return (
         <header>
             <nav className="navbar">

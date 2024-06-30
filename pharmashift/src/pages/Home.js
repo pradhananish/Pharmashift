@@ -2,19 +2,22 @@ import React from 'react';
 import Navbar from '../components/navbar';
 import Ads from '../components/ADS';
 import Thoughts from '../components/thoughts';
-import Login from '../components/login';
-import Register from '../components/register';
-import '../style.css';
+import Doctorlist from'../components/Doctorlist';
+import './homepage.css';
 
+
+import '../style.css';
 const Home = () => {
     return (
-        <div>
-            <Navbar />
-            <div className="content">
+        <div className='home-page'>
+           <Navbar />
+            <div className="left-column">
                 <Ads />
                 <Thoughts />
-                <Login />
-                <Register />
+
+            </div>
+            <div className="right-column">
+                <Doctorlist></Doctorlist>
             </div>
         </div>
     );

@@ -1,0 +1,25 @@
+.doctors-list {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+}
+
+.doctors-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.doctors-list li {
+    margin-bottom: 20px;
+}
+
+.doctors-list li h3 {
+    margin: 0 0 5px 0;
+}
+
+.doctors-list li p {
+    margin: 0;
+    color: #666;
+}
