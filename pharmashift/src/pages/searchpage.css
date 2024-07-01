@@ -1,0 +1,26 @@
+.search-page {
+  text-align: center;
+  padding: 10px;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0px;
+  
+}
+
+.left-column, .right-column {
+  flex: 1;
+  padding: 10px;
+  max-width: 50%; /* Adjust as needed */
+}
+
+.left-column {
+  background-color: #f9f9f9;
+}
+
+.right-column {
+  background-color: #f9f9f9;
+;
+}

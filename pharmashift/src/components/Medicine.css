@@ -1,0 +1,60 @@
+.diseases-data {
+  text-align: left;
+  padding: 10px;
+}
+
+.search-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.search-input {
+  width: 200px;
+  height: 40px;
+  border: 1px solid #8cc4b8;
+  border-radius: 5px;
+  padding: 0 10px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.search-btn {
+  width: 100px;
+  height: 40px;
+  background-color: #8cc4b8;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.results-list {
+  list-style: none;
+  padding: 0;
+}
+
+.result-item {
+  background-color: #8cc4b8;
+  color: #fff;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.result-item:hover {
+  background-color: #6aa8a8;
+}
+
+.cancel-btn {
+  margin-top: 20px;
+  background-color: #ff4b4b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
