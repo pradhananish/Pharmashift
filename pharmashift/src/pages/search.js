@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from '../components/navbar'; // Ensure the correct path and filename casing
+import Navbar from '../components/navbar'; 
 import DiseasesData from '../components/DiseasesData';
 import Medicine from '../components/Medicine';
 import './searchpage.css';

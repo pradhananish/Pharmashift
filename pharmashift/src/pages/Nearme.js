@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../components/navbar';
-import './Nearme.css'; // Import CSS for styling
+import './Nearme.css'; 
 
 const Nearme = () => {
   const [query, setQuery] = useState('');
@@ -35,24 +35,23 @@ const Nearme = () => {
   }, [googleMapsLoaded]);
 
   const handleSearch = () => {
-    // Sample data for demonstration
+   
     const locations = [
       { name: 'Hospital A', address: '123 Main St', lat: -34.397, lng: 150.644 },
       { name: 'Clinic B', address: '456 Oak Ave', lat: -34.407, lng: 150.654 },
       { name: 'Pharmacy C', address: '789 Elm Blvd', lat: -34.417, lng: 150.664 },
     ];
 
-    // Filter locations based on query
+    
     const filteredResults = locations.filter(location =>
       location.name.toLowerCase().includes(query.toLowerCase())
     );
     setResults(filteredResults);
 
-    // Clear existing markers
     if (map) {
       markers.forEach(marker => marker.setMap(null));
 
-      // Add markers to the map for each filtered result
+    
       const markers = filteredResults.map(location => {
         const marker = new window.google.maps.Marker({
           position: { lat: location.lat, lng: location.lng },
@@ -65,9 +64,9 @@ const Nearme = () => {
   };
 
   const handleLocationClick = (location) => {
-    // Handle click on a location item
+    
     console.log('Clicked on:', location);
-    // Optionally, pan to the marker location on the map
+    
     if (map) {
       map.panTo({ lat: location.lat, lng: location.lng });
     }

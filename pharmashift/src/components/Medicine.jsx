@@ -15,7 +15,7 @@ const DiseasesData = () => {
   const [results, setResults] = useState([]);
 
   const handleSearch = () => {
-    // Filter medicine data based on the query
+  
     const filteredResults = Object.keys(MedicineData).filter(medicine =>
       medicine.toLowerCase().includes(query.toLowerCase())
     );
@@ -23,9 +23,9 @@ const DiseasesData = () => {
   };
 
   const handleMedicineClick = (medicine) => {
-    // Handle click action based on medicine name
+   
     console.log(`Clicked on ${medicine}`);
-    // Implement navigation or other actions based on the medicine clicked
+  
   };
 
   return (

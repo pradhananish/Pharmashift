@@ -8,7 +8,7 @@ const doctors = [
     { name: 'Dr. John Alica', specialty: 'Surgen' },
     { name: 'Dr. Smith', specialty: 'General Surgery' },
     { name: 'Dr.Johnson', specialty: 'Forensic Pathology' },
-    // Add more doctors as needed
+   
 ];
 
 const DoctorsList = () => {

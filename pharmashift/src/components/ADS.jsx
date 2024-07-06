@@ -8,7 +8,7 @@ const adImages = [
     photo1,
     photo2,
     photo3,
-    // Add more image imports
+   
 ];
 
 const Ads = () => {
@@ -17,9 +17,9 @@ const Ads = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex(prevIndex => (prevIndex + 1) % adImages.length);
-        }, 3000); // Change image every 5 seconds
+        }, 3000); 
 
-        return () => clearInterval(interval); // Cleanup the interval on component unmount
+        return () => clearInterval(interval); 
     }, []);
 
     return (
