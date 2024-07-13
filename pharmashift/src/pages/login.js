@@ -1,28 +1,44 @@
+// src/pages/Login.jsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../AuthContext';
+import { login } from '../api'; // Assuming you have an API function for login
 import './login.css';
 
 const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [role, setRole] = useState('user'); 
     const navigate = useNavigate();
     const { setIsAuthenticated, setUser } = useAuth();
 
-    const handleLogin = (e) => {
+    const handleLogin = async (e) => {
         e.preventDefault();
-     
-        if (username === 'user' && password === 'pass') {
+        try {
+            const response = await login({ username, password });
             setIsAuthenticated(true);
-            setUser({ username, profilePic: '/path/to/profilePic.jpg' }); 
-            navigate('/');
-        } else {
+            setUser(response.data);
+            switch (role) {
+                case 'admin':
+                    navigate('/admin');
+                    break;
+                case 'doctor':
+                    navigate('/doctor');
+                    break;
+                case 'medicalStore':
+                    navigate('/medical-store');
+                    break;
+                default:
+                    navigate('/');
+                    break;
+            }
+        } catch (error) {
             alert('Invalid username or password');
         }
     };
 
     const handleRegisterClick = () => {
-        navigate('../Register');
+        navigate('/register');
     };
 
     return (
@@ -47,6 +63,19 @@ const Login = () => {
                         onChange={(e) => setPassword(e.target.value)}
                     />
                 </div>
+                <div className="form-group">
+                    <label>Role:</label>
+                    <select 
+                        name="role" 
+                        value={role} 
+                        onChange={(e) => setRole(e.target.value)}
+                    >
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                        <option value="doctor">Doctor</option>
+                        <option value="medicalStore">Medical Store</option>
+                    </select>
+                </div>
                 <div className="form-actions">
                     <button type="submit">Login</button>
                     <button type="button" onClick={handleRegisterClick}>Register</button>
@@ -57,3 +86,4 @@ const Login = () => {
 };
 
 export default Login;
+
